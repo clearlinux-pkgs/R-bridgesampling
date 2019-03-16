@@ -4,7 +4,7 @@
 #
 Name     : R-bridgesampling
 Version  : 0.6.0
-Release  : 17
+Release  : 18
 URL      : https://cran.r-project.org/src/contrib/bridgesampling_0.6-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/bridgesampling_0.6-0.tar.gz
 Summary  : Bridge Sampling for Marginal Likelihoods and Bayes Factors
