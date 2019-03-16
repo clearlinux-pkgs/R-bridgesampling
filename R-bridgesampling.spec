@@ -4,16 +4,12 @@
 #
 Name     : R-bridgesampling
 Version  : 0.6.0
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/bridgesampling_0.6-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/bridgesampling_0.6-0.tar.gz
 Summary  : Bridge Sampling for Marginal Likelihoods and Bayes Factors
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-Brobdingnag
-Requires: R-coda
-Requires: R-mvtnorm
-Requires: R-scales
 BuildRequires : R-Brobdingnag
 BuildRequires : R-coda
 BuildRequires : R-mvtnorm
@@ -21,8 +17,7 @@ BuildRequires : R-scales
 BuildRequires : buildreq-R
 
 %description
-factors, posterior model probabilities, and normalizing constants in general,
-    via different versions of bridge sampling (Meng & Wong, 1996,
+No detailed description available
 
 %prep
 %setup -q -c -n bridgesampling
@@ -32,10 +27,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1540465477
+export SOURCE_DATE_EPOCH=1552722920
 
 %install
-export SOURCE_DATE_EPOCH=1540465477
+export SOURCE_DATE_EPOCH=1552722920
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -71,8 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library bridgesampling|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  bridgesampling || :
 
 
 %files
