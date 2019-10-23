@@ -4,7 +4,7 @@
 #
 Name     : R-bridgesampling
 Version  : 0.7.2
-Release  : 25
+Release  : 26
 URL      : https://cran.r-project.org/src/contrib/bridgesampling_0.7-2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/bridgesampling_0.7-2.tar.gz
 Summary  : Bridge Sampling for Marginal Likelihoods and Bayes Factors
@@ -21,10 +21,10 @@ BuildRequires : R-mvnfast
 BuildRequires : R-scales
 BuildRequires : R-stringr
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
-factors, posterior model probabilities, and normalizing constants in general,
-    via different versions of bridge sampling (Meng & Wong, 1996,
+No detailed description available
 
 %prep
 %setup -q -c -n bridgesampling
@@ -34,10 +34,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1564082092
+export SOURCE_DATE_EPOCH=1571805739
 
 %install
-export SOURCE_DATE_EPOCH=1564082092
+export SOURCE_DATE_EPOCH=1571805739
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
