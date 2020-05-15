@@ -4,7 +4,7 @@
 #
 Name     : R-bridgesampling
 Version  : 1.0.0
-Release  : 31
+Release  : 32
 URL      : https://cran.r-project.org/src/contrib/bridgesampling_1.0-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/bridgesampling_1.0-0.tar.gz
 Summary  : Bridge Sampling for Marginal Likelihoods and Bayes Factors
@@ -23,25 +23,27 @@ BuildRequires : R-stringr
 BuildRequires : buildreq-R
 
 %description
-No detailed description available
+factors, posterior model probabilities, and normalizing constants in general,
+    via different versions of bridge sampling (Meng & Wong, 1996,
 
 %prep
 %setup -q -c -n bridgesampling
+cd %{_builddir}/bridgesampling
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582745745
+export SOURCE_DATE_EPOCH=1589586825
 
 %install
-export SOURCE_DATE_EPOCH=1582745745
+export SOURCE_DATE_EPOCH=1589586825
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
